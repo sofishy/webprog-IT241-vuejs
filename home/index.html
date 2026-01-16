@@ -29,21 +29,25 @@
       </p>
     </section>
     
-    <section id="app">
-      {{ message }}
-    </section>
-  </main>
+</div>
 
-  <div id="app2"></div>
-    <div>
-      <img v-for="x in manyFoods" v-bind:src="x">
-    </div>
+<div id="app">
+  {{ message }}
+</div>
 
-  <!-- Vue.js library -->
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-  
-  <!-- Your separate Vue.js file -->
-  <script src="js/vue.js"></script>
-  <script src="js/images.js"></script>
+<div id="app2">
+
+  <div>
+    <img v-for="x in manyFoods" v-bind:src="x">
+  </div>
+
+</div>
+
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<script src="js/vue.js"></script>
+<script src="js/images.js"></script>
+
 </body>
 </html>
