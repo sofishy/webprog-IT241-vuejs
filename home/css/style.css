@@ -1,9 +1,10 @@
-  #app {
-      display: inline-block;
-      padding: 10px;
-      font-size: x-large;
-      background-color: rgb(229, 158, 188);
-    }
+#app {
+  display: inline-block;
+  padding: 10px;
+  font-size: x-large;
+  background-color: rgb(229, 158, 188);
+}
+
 body {
   background-color: rgb(232, 243, 194);
 }

@@ -1,34 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My first Vue page</title>
-  <link rel="stylesheet" href="css/style.css?version=0.1">">
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <header>
+    <h1>wowowiewow</h1>
+  </header>
+  
+  <main>
+    <section>
+      <p>
+        About Me<br>
+        Education / Achievements<br>
+        :( <br>
+        Course <br>
+        IT Experience<br>
+        code combat <br>
+        Hobbies & Interests<br>
+        i like to clean <br>
+        Goals In Life / Dream<br>
+        be a free man <br>
+      </p>
+    </section>
+    
+    <section id="app">
+      {{ message }}
+    </section>
+  </main>
 
-<h1> WOWOWOIEWOW </h1>
-
-<p>
- 
-About Me<br>
-Education / Achievements<br>
- :( <br>
-Course <br>
-IT Experience<br>
- code combat <br>
-Hobbies & Interests<br>
- i like to clean <br>
-Goals In Life / Dream<br>
-be a free man <br>
-
-<div id="app">
-  {{ message }}
-</div>
-
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-
-<script src="js/vue.js"></script>
-
+  <!-- Vue.js library -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  
+  <!-- Your Vue.js initialization -->
+  <script>
+    const { createApp } = Vue;
+    
+    createApp({
+      data() {
+        return {
+          message: "Hello Vue!"
+        }
+      }
+    }).mount('#app');
+  </script>
 </body>
-
 </html>
