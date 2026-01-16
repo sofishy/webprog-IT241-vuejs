@@ -4,3 +4,11 @@
       font-size: x-large;
       background-color: rgb(229, 158, 188);
     }
+body {
+  background-color: rgb(232, 243, 194);
+}
+
+h1 {
+  color: rgb(105, 180, 175);
+  margin-left: 20px;
+}
