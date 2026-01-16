@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My first Vue page</title>
-  <!-- Link to external CSS file -->
+
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/images.css">
 </head>
 <body>
   <header>
@@ -33,10 +34,16 @@
     </section>
   </main>
 
+  <div id="app2"></div>
+    <div>
+      <img v-for="x in manyFoods" v-bind:src="x">
+    </div>
+
   <!-- Vue.js library -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   
   <!-- Your separate Vue.js file -->
   <script src="js/vue.js"></script>
+  <script src="js/images.js"></script>
 </body>
 </html>
