@@ -76,7 +76,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 /* ---------------- GLOBAL ---------------- */
 * {
   box-sizing: border-box;
@@ -85,7 +85,7 @@ export default {
 
 body {
   margin: 0;
-  background: #fde2e4; /* PINK BACKGROUND (from your CSS) */
+  background: #fde2e4; /* FULL PAGE PINK */
   color: #5a3a2e;
   text-align: center;
 }
@@ -98,36 +98,41 @@ body {
   align-items: center;
 }
 
+/* ---------------- CARD ---------------- */
 .home-card {
   background: #fff7f2;
   padding: 40px;
-  max-width: 700px;
+  max-width: 800px;
   width: 90%;
-  border-radius: 24px;
-  border: 2px solid #d2b8a3;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-/* ---------------- TITLE ---------------- */
-.title-center {
-  text-align: center;
-  color: #e89bb0;
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.sticker {
-  width: 40px;
-  vertical-align: middle;
+  border-radius: 30px;
+  border: 3px solid #d2b8a3;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
 /* ---------------- TEXT ---------------- */
-.tagline {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
+.welcome-text {
+  text-align: center;
 }
 
-/* ---------------- MENU ---------------- */
+.title-center {
+  color: #e89bb0;
+  font-size: 2.6rem;
+  margin-bottom: 15px;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+/* ---------------- STICKER ---------------- */
+.sticker {
+  width: 36px;
+  vertical-align: middle;
+  margin: 0 8px;
+}
+
+/* ---------------- BUTTON ---------------- */
 .menu {
   display: flex;
   justify-content: center;
@@ -137,8 +142,8 @@ body {
   background: #f4a6b8;
   color: white;
   border: none;
-  padding: 10px 18px;
-  border-radius: 20px;
+  padding: 12px 26px;
+  border-radius: 999px;
   font-weight: 600;
   cursor: pointer;
 }
@@ -170,7 +175,7 @@ body {
 /* ---------------- RESPONSIVE ---------------- */
 @media (max-width: 768px) {
   .home-card {
-    padding: 20px;
+    padding: 25px;
   }
 }
 </style>
