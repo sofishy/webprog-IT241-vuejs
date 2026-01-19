@@ -22,8 +22,8 @@ export default {
     display: inline-block;
     margin: 10px;
     padding: 10px;
-    background-color: lightpink;   
-    color: peachpuff;              
+    background-color: #d6fffd;   
+    color: #7cfff6;              
   }
 </style>
 
