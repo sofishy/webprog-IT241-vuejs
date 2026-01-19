@@ -23,7 +23,7 @@ export default {
     margin: 10px;
     padding: 10px;
     background-color: #d6fffd;   
-    color: #8ad9d4;              
+    color: #7cc1bd;              
   }
 </style>
 
