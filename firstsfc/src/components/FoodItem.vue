@@ -22,7 +22,7 @@ export default {
     display: inline-block;
     margin: 10px;
     padding: 10px;
-    background-color: lightpink;   
-    color: peachpuff;              
+    background-color: #ffd6e8;   
+    color: #ff7c98;              
   }
 </style>
