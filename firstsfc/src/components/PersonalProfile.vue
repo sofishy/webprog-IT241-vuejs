@@ -1,15 +1,9 @@
 <template>
-  <!-- FLOATING NAV -->
-  <div class="floating-nav">
-    <button @click="goToSection('home')">Home</button>
-    <button @click="goToSection('about')">About</button>
-  </div>
-
   <!-- HOME SECTION -->
   <section id="home" class="home">
     <div class="home-card">
       <div class="welcome-text">
-        <h1>
+        <h1 class="title-center">
           <img
             class="sticker"
             src="https://supplies.ju.mp/assets/images/gallery05/9747a42c.gif?v=1c1ba870"
@@ -30,7 +24,6 @@
 
       <div class="menu">
         <button @click="goToSection('about')">About Me</button>
-        <button @click="goToResources">Resources</button>
       </div>
     </div>
   </section>
@@ -78,9 +71,6 @@ export default {
       if (section) {
         section.scrollIntoView({ behavior: "smooth" })
       }
-    },
-    goToResources() {
-      window.location.href = "resources.html"
     }
   }
 }
@@ -95,39 +85,9 @@ export default {
 
 body {
   margin: 0;
-  background: #fde2e4;
+  background: #fde2e4; /* PINK BACKGROUND (from your CSS) */
   color: #5a3a2e;
   text-align: center;
-}
-
-/* ---------------- FLOATING NAV ---------------- */
-.floating-nav {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 12px;
-  border-radius: 20px;
-  background: #f3d6c6;
-  border: 2px solid #d2b8a3;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.floating-nav button {
-  background: #e89bb0;
-  border: none;
-  color: white;
-  padding: 10px 14px;
-  border-radius: 15px;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.floating-nav button:hover {
-  opacity: 0.85;
 }
 
 /* ---------------- HOME ---------------- */
@@ -148,8 +108,9 @@ body {
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* ---------------- WELCOME TEXT ---------------- */
-.welcome-text h1 {
+/* ---------------- TITLE ---------------- */
+.title-center {
+  text-align: center;
   color: #e89bb0;
   font-size: 2.5rem;
   margin-bottom: 10px;
@@ -160,17 +121,16 @@ body {
   vertical-align: middle;
 }
 
+/* ---------------- TEXT ---------------- */
 .tagline {
   font-size: 1.1rem;
   margin-bottom: 20px;
 }
 
-/* ---------------- MENU BUTTONS ---------------- */
+/* ---------------- MENU ---------------- */
 .menu {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
 }
 
 .menu button {
@@ -207,7 +167,7 @@ body {
   border: 2px solid #d2b8a3;
 }
 
-/* ---------------- MEDIA QUERIES ---------------- */
+/* ---------------- RESPONSIVE ---------------- */
 @media (max-width: 768px) {
   .home-card {
     padding: 20px;
