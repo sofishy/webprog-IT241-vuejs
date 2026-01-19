@@ -3,7 +3,6 @@
   <div class="floating-nav">
     <button @click="goToSection('home')">Home</button>
     <button @click="goToSection('about')">About</button>
-    <button @click="goToSection('guestbook')">Guestbook</button>
   </div>
 
   <!-- HOME SECTION -->
@@ -11,12 +10,14 @@
     <div class="home-card">
       <div class="welcome-text">
         <h1>
-          <img class="sticker"
+          <img
+            class="sticker"
             src="https://supplies.ju.mp/assets/images/gallery05/9747a42c.gif?v=1c1ba870"
             alt="Sticker"
           >
           My Profile
-          <img class="sticker"
+          <img
+            class="sticker"
             src="https://supplies.ju.mp/assets/images/gallery05/9747a42c.gif?v=1c1ba870"
             alt="Sticker"
           >
@@ -29,7 +30,6 @@
 
       <div class="menu">
         <button @click="goToSection('about')">About Me</button>
-        <button @click="goToSection('guestbook')">Guestbook</button>
         <button @click="goToResources">Resources</button>
       </div>
     </div>
@@ -67,25 +67,11 @@
       My goal is to become successful in the IT field and build a stable future.
     </p>
   </section>
-
-  <!-- GUESTBOOK -->
-  <section id="guestbook" class="content">
-    <h2>Guestbook</h2>
-
-    <div class="guestbook">
-      <input type="text" placeholder="Your name" disabled>
-      <input type="text" placeholder="Your message" disabled>
-
-      <button disabled>Submit</button>
-
-      <p><em>Drop your comments and suggestions!</em></p>
-    </div>
-  </section>
 </template>
 
 <script>
 export default {
-  name: "Profile",
+  name: "PersonalProfile",
   methods: {
     goToSection(id) {
       const section = document.getElementById(id)
@@ -101,5 +87,130 @@ export default {
 </script>
 
 <style scoped>
-@import "@/css/css-grid.css";
+/* ---------------- GLOBAL ---------------- */
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #fde2e4;
+  color: #5a3a2e;
+  text-align: center;
+}
+
+/* ---------------- FLOATING NAV ---------------- */
+.floating-nav {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 20px;
+  background: #f3d6c6;
+  border: 2px solid #d2b8a3;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.floating-nav button {
+  background: #e89bb0;
+  border: none;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.floating-nav button:hover {
+  opacity: 0.85;
+}
+
+/* ---------------- HOME ---------------- */
+.home {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-card {
+  background: #fff7f2;
+  padding: 40px;
+  max-width: 700px;
+  width: 90%;
+  border-radius: 24px;
+  border: 2px solid #d2b8a3;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ---------------- WELCOME TEXT ---------------- */
+.welcome-text h1 {
+  color: #e89bb0;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.sticker {
+  width: 40px;
+  vertical-align: middle;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* ---------------- MENU BUTTONS ---------------- */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.menu button {
+  background: #f4a6b8;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.menu button:hover {
+  opacity: 0.85;
+}
+
+/* ---------------- CONTENT ---------------- */
+.content {
+  padding: 60px 15px;
+}
+
+.content h2 {
+  color: #e89bb0;
+  margin-top: 50px;
+  text-decoration: underline;
+}
+
+.content p {
+  background: #fff7f2;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 14px;
+  border: 2px solid #d2b8a3;
+}
+
+/* ---------------- MEDIA QUERIES ---------------- */
+@media (max-width: 768px) {
+  .home-card {
+    padding: 20px;
+  }
+}
 </style>
